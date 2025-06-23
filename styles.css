@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root{
+  --my-orange: rgba(250, 163, 0, 0.843); 
+  --cap-font: 'Bebas Neue', sans-serif;
+}
+*{
+  box-sizing: border-box;
+  font-family: var(--cap-font);
+  color: white;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+html{
+  font-size: 62.5%;
+  position: relative;
+  scroll-behavior:smooth;
+  background-color: rgba(0,0,0,0.6);
+}
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    display: block;
+}
+
+html::-webkit-scrollbar-track {
+  background: #000000;
+}
+html::-webkit-scrollbar {
+    width: 5px;
+    background: #222;
+    border-radius: 1rem;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: darkorange;
+  border-radius: 1rem;
+  border: 1px solid #000000;
+}
+
+
+header{
+  display: flex;
+  height: 6rem;
+  width: 100%;
+  background-color: black;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1px 1rem;
+  font-size: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid white;
+  z-index: 10;
+}
+#Home{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+}
+iframe{
+  width: 40%;
+  margin: 3rem 1rem 1rem 1rem;
+}
+body{
+    width: 100vw;
+    display: block;
+}
+#header-img{
+  height: 100%;
+  padding: 0.5rem;
+}
+#nav-bar{
+  display: flex;
+  margin-right: 2rem;
+  gap: 2rem;
+}
+.nav-link{
+  font-size: 3rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.nav-link:hover{
+  transform: scale(1.1);
+  color: darkorange;
+}
+main{
+  position: relative;
+  width: 100vw;
+  margin-top: 6rem;
+  background-color: rgba(0,0,0,0.8);
+}
+.darkorange{
+  color: darkorange;
+  font-weight: bold;
+  font-size: 3.5rem;
+}
+a{
+  text-decoration: none;
+}
+h1{
+  font-size: 2.5rem;
+  font-family: 'Boldonse', system-ui;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 1.5px;
+}
+#Home-1{
+  width: 100%;
+  padding: 3rem 3rem 1rem 3rem;
+  border-bottom: 2px solid white;
+}
+form{
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+#email{
+  border-radius: 1rem 0 0 1rem;
+  width: 30rem;
+  height: 5rem;
+  font-size: 2rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: black;
+  padding-left: 1rem;
+}
+#email::placeholder{
+  color: white;
+  opacity: 1;
+}
+#submit{
+  height: 5rem;
+  font-size: 2rem;
+  width: 10rem;
+  border-radius: 0 1rem 1rem 0;
+  background-color: darkorange;
+  color: black;
+}
+#submit:hover{
+  background-color: orange;
+}
+#Pornstars{
+  display: grid;
+  
+  grid-template-columns: repeat(5,1fr);
+  gap: 2rem;
+  justify-content: space-evenly;
+  border-bottom: 2px solid white;
+  padding: 3rem;
+  position: relative;
+}
+
+.pImage{
+  width: 95%;
+}
+
+#Pornstars a div{
+  width: 90%;
+  background-color: black;
+  padding: 1rem;
+  border-radius: 1rem 0 1rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  margin-left: 5%;
+  height: 100%;
+}
+#Pornstars a div:hover{
+  transform: scale(1.05);
+  border: 2px solid white;
+}
+p{
+   font-family: "IBM Plex Serif", serif;
+   font-size: 3rem;
+}
+#categ-list{
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: none;
+  font-family: "IBM Plex Sans", sans-serif;
+  transition: transform 0.3s ease;
+}
+#Categories{
+  width: 100%;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  gap: 1rem;
+  border-bottom: 2px solid white;
+}
+#categ-list:hover{
+  transform: scale(1.1);
+  color: darkorange;
+}
+footer{
+  padding: 3rem;
+  width: 100%;
+  position: relative;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: gray;
+}
+.name{
+  font-size: 5rem;
+  color: gray;
+}
+.alias{
+  margin-top: -2rem;
+  color: gray;
+}
+.creator{
+  color: gray;
+  font-weight: bold;
+}
+@media only screen and (max-width: 1500px) {
+  #Pornstars{
+    grid-template-columns: repeat(4,4fr);
+  }
+  #Pornstars div{
+    width: 28rem;
+  }
+  #Categories{
+    grid-template-columns: repeat(8,1fr);
+    gap: 0.5rem;
+  }
+}
+@media only screen and (max-width: 1210px) {
+  #Pornstars{
+    grid-template-columns: repeat(4,1fr);
+  }
+  #Pornstars div{
+    width: 90%;
+  }
+  #Categories{
+    grid-template-columns: repeat(6,1fr);
+    gap: 0.5rem;
+  }
+  .categ-list{
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #Pornstars{
+    grid-template-columns: repeat(3,1fr);
+  }
+  #Home-1{
+    padding: 0 auto;
+  }
+  #Pornstars div{
+    width: 90%;
+  }
+  .categ-list{
+    font-size: 2rem;
+  }
+  #Categories{
+    grid-template-columns: repeat(4,1fr);
+    gap: 0.5rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #Pornstars{
+    grid-template-columns: repeat(2,1fr);
+  }
+  #Pornstars div{
+    width: 90%;
+  }
+  #Categories{
+    grid-template-columns: repeat(3,1fr);
+    gap: 0.5rem;
+  }
+  .categ-list{
+    font-size: 1.5rem;
+  }
+  .name{
+    font-size: 3rem;
+  }
+  .alias{
+    font-size: 2rem;
+    margin-top: -1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #Pornstars{
+    grid-template-columns: repeat(1,1fr);
+  }
+  #Pornstars div{
+    width: 90%;
+  }
+  #Categories{
+    grid-template-columns: repeat(2,1fr);
+    gap: 0.5rem;
+  }
+  .categ-list{
+    font-size: 1.2rem;
+  }
+  .name{
+    font-size: 2.5rem;
+  }
+  .alias{
+    font-size: 1.5rem;
+    margin-top: -0.5rem;
+  }
+  iframe{
+    height: 30rem;
+    aspect-ratio: 1 / 1;
+  }
+  #header{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 13rem;
+    width: 100%;
+  }
+  #header-img{
+    height: 50%;
+    margin-bottom: 1rem;
+  }
+  #nav-bar{
+    display: flex;
+    width: 101vw;
+    border-top: 2px solid white;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    font-size: 0.6rem;
+  }
+  main{
+    margin-top: 13rem;
+    padding: 0 1rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  html{
+    font-size: 0.5rem;
+  }
+  #header{
+    position: fixed;
+    top: 0;
+  }
+
+  #header-img{
+    height: 50%;
+  }
+  #nav-bar{
+    gap: 1rem;
+    font-size: 0.5rem;
+  }
+  .nav-link{
+    font-size: 2.5rem;
+  }
+  #submit{
+    padding: 0 0.5rem;
+    font-size: 1.5rem;
+  }
+  #email::placeholder{
+    font-size: 1.5rem;
+  }
+  iframe{
+    height: 20rem;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+
+
+
+
+
+
