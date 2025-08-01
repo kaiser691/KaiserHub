@@ -64,6 +64,9 @@ iframe{
   width: 40%;
   margin: 3rem 1rem 1rem 1rem;
 }
+video{
+  width: 90%;
+}
 body{
     width: 100vw;
     display: block;
